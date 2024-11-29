@@ -1,0 +1,252 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.menu-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background: #e95059;
+  padding: 20px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.menu-logo {
+  line-height: 0;
+  margin: 0 20px;
+}
+
+.menu-logo img {
+  max-height: 70px;
+  max-width: 120px;
+  border-radius: 50%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+main .detail-content-button {
+  margin-left: 70px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: fit-content;
+}
+
+main .detail-content-button a {
+  padding: 5px 10px;
+  background-color: transparent;
+  border: 2px solid #e95059;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: small;
+  color: black;
+  transition: 0.4s;
+}
+
+main .detail-content-button a:hover {
+  background-color: #e95059;
+  border: 2px solid black;
+  color: white;
+}
+
+main .content-button {
+  margin-left: 70px;
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+  width: fit-content;
+  gap: 20px;
+}
+
+main .content-button .button-tambah button {
+  padding: 5px 10px;
+  background-color: transparent;
+  border: 2px solid #e95059;
+  border-radius: 10px;
+  color: black;
+  transition: 0.4s;
+}
+
+main .content-button .button-tambah button:hover {
+  background-color: #e95059;
+  border: 2px solid black;
+  color: white;
+}
+
+main .content-button .button-tanggal {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+main .content-button .button-tanggal input {
+  padding: 5px 10px;
+  background-color: transparent;
+  border: 2px solid #e95059;
+  border-radius: 10px;
+  color: black;
+}
+
+main .content-button .button-tanggal button {
+  padding: 5px 10px;
+  background-color: transparent;
+  border: 2px solid #e95059;
+  border-radius: 10px;
+  color: black;
+  transition: 0.4s;
+}
+
+main .content-button .button-tanggal button:hover {
+  background-color: #e95059;
+  border: 2px solid black;
+  color: white;
+}
+
+table {
+  margin: 10px auto;
+  border-collapse: collapse;
+  width: 90%;
+}
+
+table td,
+table th {
+  border: 1px solid white;
+  padding: 8px;
+  text-align: center;
+}
+
+table tr:nth-child(even) {
+  background-color: pink;
+}
+
+table tr {
+  transition: 0.4s;
+}
+
+table tr.total {
+  background-color: #e95059;
+  color: white;
+}
+
+table tr:hover {
+  background-color: plum;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #e95059;
+  color: white;
+}
+
+table form button {
+  padding: 3px 10px;
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  transition: 0.4s;
+  font-size: small;
+}
+
+table form button:hover {
+  color: white;
+}
+
+table td a {
+  padding: 2px 10px;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  transition: 0.4s;
+  font-size: small;
+}
+
+table td a:hover {
+  background-color: #e95059;
+  color: white;
+}
+
+main .container {
+  margin: 0 auto;
+  padding: 40px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #e95059;
+}
+
+main .tambah-content-button {
+  padding: 10px;
+  width: fit-content;
+}
+
+main h1 {
+  text-align: center;
+}
+
+main .tambah-content-button a {
+  padding: 5px 10px;
+  background-color: transparent;
+  border: 2px solid #e95059;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: small;
+  color: black;
+  transition: 0.4s;
+}
+
+main .tambah-content-button a:hover {
+  background-color: #e95059;
+  border: 2px solid black;
+  color: white;
+}
+
+main form {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+::placeholder {
+  color: black;
+}
+
+main input {
+  padding: 5px 10px;
+  background-color: transparent;
+  border: 2px solid #e95059;
+  border-radius: 10px;
+  color: black;
+}
+
+main button {
+  padding: 5px 10px;
+  background-color: transparent;
+  border: 2px solid #e95059;
+  border-radius: 10px;
+  color: black;
+  transition: 0.4s;
+}
+
+main button:hover {
+  background-color: #e95059;
+  border: 2px solid black;
+  color: white;
+}
