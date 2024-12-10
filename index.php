@@ -21,18 +21,21 @@ if (isset($_POST['delete'])) {
     $conn->query("DELETE FROM transaksi WHERE id = $id");
 }
 
+// Get today's date
+$tanggal_hari_ini = date('Y-m-d');
+
 if (isset($_POST['filter'])) {
     $tanggal = $_POST['tanggal'];
-
-    $result = $conn->query("SELECT * FROM transaksi WHERE DATE(tanggal_transaksi) = '$tanggal' LIMIT $limit OFFSET $offset");
-    $total_result = $conn->query("SELECT COUNT(*) AS total FROM transaksi WHERE DATE(tanggal_transaksi) = '$tanggal'");
 } else {
-    $result = $conn->query("SELECT * FROM transaksi LIMIT $limit OFFSET $offset");
-    $total_result = $conn->query("SELECT COUNT(*) AS total FROM transaksi");
+    $tanggal = $tanggal_hari_ini;
 }
+
+$result = $conn->query("SELECT * FROM transaksi WHERE DATE(tanggal_transaksi) = '$tanggal' LIMIT $limit OFFSET $offset");
+$total_result = $conn->query("SELECT COUNT(*) AS total FROM transaksi WHERE DATE(tanggal_transaksi) = '$tanggal'");
 
 $total_rows = $total_result->fetch_assoc()['total'];
 $total_pages = ceil($total_rows / $limit);
+
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +63,7 @@ $total_pages = ceil($total_rows / $limit);
                 <input type="date" name="tanggal" id="tanggal">
                 <button type="submit" name="filter">Sortir</button>
             </form>
-            <form action="generate_pdf.php" method="get">
+            <form action="generate_pdf.php" method="get" class="button-cetak">
                 <button type="submit">Cetak</button>
             </form>
         </div>
